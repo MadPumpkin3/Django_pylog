@@ -20,12 +20,16 @@ from django.contrib import admin
 from django.urls import path
 
 from config.views import index
-from blog.views import post_list
+from blog.views import post_list, post_detail, post_add
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
     path('posts/', post_list),
+    # <과>사이의 값은 동적으로 갓을 받는다는 의미, ':'의 왼쪽 문자열의 int는 <와> 사이의 값을 '정수'로 받는다는 의미,
+    # 오른쪽 값은 <와>가 'post_id'라는 이름을 가진다는 의미
+    path('posts/<int:post_id>/', post_detail),
+    path('posts/add/', post_add),
 ]
 urlpatterns += static(
     # URL의 접두어가 MEDIA_URL일 때는 정적파일을 돌려준다
