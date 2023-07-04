@@ -93,6 +93,47 @@ a.btn {
     color: white;
     background-color: #bbb; }
 
+ul.comments {
+  font-size: 12px; }
+  ul.comments > div {
+    border-top: 1px solid #eee;
+    margin-top: 30px;
+    padding-top: 10px;
+    font-weight: 500; }
+  ul.comments > li.comment {
+    list-style: disc;
+    margin-left: 1.5em; }
+  ul.comments > li.comment-empty {
+    font-style: italic; }
+
+@media only screen and (hover: none) and (pointer: coarse) {
+  html {
+    font-size: 4vw; }
+
+  #post-list {
+    padding: 14vw 0; }
+
+  #navbar {
+    height: 14vw; }
+
+  ul.posts {
+    margin: 0 5vw;
+    padding: 0; }
+    ul.posts > li.post {
+      padding: 5vw 0 5vw 0; }
+      ul.posts > li.post h2 {
+        font-size: 1.3rem; }
+      ul.posts > li.post p {
+        font-size: .9rem;
+        padding-right: 22vw; }
+      ul.posts > li.post img {
+        width: 20vw;
+        height: 20vw;
+        top: 16vw;
+        right: 0; }
+
+  ul.comments {
+    font-size: .8rem; } }
 #post-list {
   padding: 59px 0; }
 
@@ -140,49 +181,8 @@ ul.posts {
       text-align: center;
       content: attr(alt); }
 
-ul.comments {
-  font-size: 12px; }
-  ul.comments > li.comment {
-    list-style: disc;
-    margin-left: 1.5em; }
-  ul.comments > li.comment-empty {
-    font-style: italic; }
-
-@media only screen and (hover: none) and (pointer: coarse) {
-  html {
-    font-size: 4vw; }
-
-  .post-list-container {
-    padding: 14vw 0; }
-
-  .navbar {
-    height: 14vw; }
-
-  ul.posts {
-    margin: 0 5vw;
-    padding: 0; }
-    ul.posts > li.post {
-      padding: 5vw 0 5vw 0; }
-      ul.posts > li.post h2 {
-        font-size: 1.3rem; }
-      ul.posts > li.post p {
-        font-size: .9rem;
-        padding-right: 22vw; }
-      ul.posts > li.post img {
-        width: 20vw;
-        height: 20vw;
-        top: 16vw;
-        right: 0; }
-
-  ul.comments {
-    font-size: .8rem; } }
 #post-detail {
   padding: 59px 10px; }
-  #post-detail .comments-title {
-    border-top: 1px solid #eee;
-    margin-top: 30px;
-    padding-top: 10px;
-    font-weight: 500; }
   #post-detail ul.post-detail-comments li.post-detail-comment {
     list-style: disc;
     margin-left: 1.5em; }
@@ -207,31 +207,31 @@ ul.comments {
       line-height: 50px;
       border-radius: 2px; }
 
-.post-add-container {
+#post-add {
   padding: 59px 0; }
-  .post-add-container input, .post-add-container textarea {
+  #post-add input, #post-add textarea {
     border: none;
     padding: 10px; }
-    .post-add-container input:focus, .post-add-container textarea:focus {
+    #post-add input:focus, #post-add textarea:focus {
       outline: none; }
-  .post-add-container textarea {
+  #post-add textarea {
     width: 100%;
     min-height: 100px;
     box-sizing: border-box;
     resize: none; }
-  .post-add-container > form {
+  #post-add > form {
     width: 100%; }
-    .post-add-container > form > div {
+    #post-add > form > div {
       padding: 10px; }
-      .post-add-container > form > div > label {
+      #post-add > form > div > label {
         vertical-align: top;
         font-size: 16px;
         line-height: 40px; }
-    .post-add-container > form > div:nth-of-type(1) {
+    #post-add > form > div:nth-of-type(1) {
       border-bottom: 1px solid #ddd; }
-      .post-add-container > form > div:nth-of-type(1) > input {
+      #post-add > form > div:nth-of-type(1) > input {
         font-size: 18px; }
-  .post-add-container .btn-post-add {
+  #post-add > form > button {
     position: fixed;
     top: 14px;
     right: 20px;
